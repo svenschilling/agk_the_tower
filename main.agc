@@ -23,16 +23,21 @@ times as integer = 3
 do
     Print( ScreenFPS() )
     // timer
+	Print("this is an update for git")    
+
+    for x = 0 to 9
+      	for y = 0 to 9
+            matrix[x,y] = Random(0,1)
+            // filling every position with a 1 with a sprite
+            if matrix[x,y] = 1 
+                xpos = Random(0,9)*32
+                ypos = Random(0,9)*32
+                SetSpritePosition(Random(1,4),xpos,ypos)
+            endif
+        next y
+    next x
     
-    for i = 0 to 3
-    	Sleep(60)
-    	times = times - 1
-    	sync()
-    next i
-    Print(times)
-    if times = 0
-    	print("finished")
-    endif
-    
+        
+                
     ///Sync()
 loop
